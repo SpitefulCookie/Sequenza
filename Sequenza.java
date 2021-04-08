@@ -45,14 +45,12 @@ class Sequenza{
     }
 
     public String toString() {
-
-        System.out.print("To string!"); //debug
         
         String buffer="";
 
-        for(int i = 0; i<this.numeri.length; i++){
+        for(int i = 0; i<dimensionecorrente; i++){
 
-           buffer=buffer.concat(Integer.toString(this.numeri[i])+", ");
+           buffer=buffer.concat(Integer.toString(this.numeri[i])+"; ");
 
         }
 

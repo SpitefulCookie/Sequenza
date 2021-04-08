@@ -6,7 +6,7 @@ class Main{
 
         test.inizializzaSeq();
 
-        test.toString();
+        test.provaToString();
 
         test.visualizzaLunghezza();
 
@@ -15,7 +15,5 @@ class Main{
         test.visualizzaMin();
         
     }
-
-   
 
 }

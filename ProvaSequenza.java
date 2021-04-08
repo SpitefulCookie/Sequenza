@@ -18,13 +18,15 @@ public class ProvaSequenza {
 
             try{
 
-                writer.write("Inserisci la dimensione massima dell'array:");
+                writer.write("Inserisci la dimensione massima dell'array: ");
 
                 writer.flush();
 
                 String input = reader.readLine();
 
                 writer.newLine();
+
+                writer.flush();
 
                 try{
 
@@ -37,6 +39,8 @@ public class ProvaSequenza {
                     writer.write("Errore! il valore inserito non è valido");
 
                     writer.newLine();
+
+                    writer.flush();
 
                 }    
             
@@ -53,6 +57,10 @@ public class ProvaSequenza {
             
             seq.aggiungiNumero(12);
 
+			seq.aggiungiNumero(59);
+
+			seq.aggiungiNumero(73);
+
         }catch(ArrayPienoException A){
 
             A.printStackTrace();
@@ -65,11 +73,11 @@ public class ProvaSequenza {
 
         try{
 
-            writer.write(this.seq.lunghezza());
-
-            writer.flush();
+            writer.write("Lunghezza: "+ Integer.toString(this.seq.lunghezza()));
 
             writer.newLine();
+			
+			writer.flush();           
 
         }catch(IOException H){
 
@@ -82,12 +90,12 @@ public class ProvaSequenza {
     public void visualizzaMin(){
 
         try{
-
-            writer.write(this.seq.min());
-
-            writer.flush();
+		
+            writer.write("Min: "+Integer.toString(this.seq.min()));
 
             writer.newLine();
+			
+			writer.flush();
 
         }catch(IOException H){
 
@@ -101,11 +109,11 @@ public class ProvaSequenza {
 
         try{
 
-            writer.write(this.seq.lunghezza());
-
-            writer.flush();
+            writer.write("Max: "+Integer.toString(this.seq.max())); // idem
 
             writer.newLine();
+			
+			writer.flush();
 
         }catch(IOException H){
 
@@ -114,6 +122,25 @@ public class ProvaSequenza {
         }
 
     }
+
+	public void provaToString(){
+
+		try{
+
+            writer.write("Elementi presenti all'interno della sequenza: " + this.seq.toString());
+
+            writer.newLine();
+			
+			writer.flush();
+
+        }catch(IOException H){
+
+            H.printStackTrace();
+
+        }
+
+
+	}
 
 }
 
